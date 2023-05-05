@@ -1,17 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: lb-service
+  name: flaskdemo
 spec:
   rules:
-  - host: lb-service.cwsh.top
+  - host: flaskdemo.cwsh.top
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: lb-service
+            name: flaskdemo
             port:
               number: 80
   ingressClassName: nginx
