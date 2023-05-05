@@ -29,7 +29,7 @@ metadata:
   name: lb-service
 spec:
   ports:
-  - port: 5000
+  - port: 80
     targetPort: 5000
   selector:
     app: flaskdemo
