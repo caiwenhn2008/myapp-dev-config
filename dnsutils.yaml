@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: dnsutils
-    image: tutum/dnsutils
+    image: tutum/dnsutils:latest
     command:
       - sleep
       - "infinity"
