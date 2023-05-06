@@ -8,8 +8,8 @@ spec:
   - host: kubia.cwsh.top
     http:
       paths:
-      - pathType: ImplementationSpecific
-        path: /kubia1
+      - pathType: Prefix
+        path: /
         backend:
           service:
             name: kubia
