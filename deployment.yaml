@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  creationTimestamp: null
   labels:
     app: flaskdemo
   name: flaskdemo
@@ -12,6 +13,7 @@ spec:
   strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: flaskdemo
     spec:
