@@ -3,6 +3,11 @@ kind: Ingress
 metadata:
   name: chatgptproxy
 spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - chatgptproxy.cwsh.top
+    secretName: tls-secret
   rules:
   - host: chatgptproxy.cwsh.top
     http:
@@ -14,5 +19,4 @@ spec:
             name: chatgptproxy
             port:
               number: 80
-  ingressClassName: nginx
 
