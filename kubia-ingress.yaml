@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kubia
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: kubia.cwsh.top
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        path: /kubia1
+        backend:
+          service:
+            name: kubia
+            port:
+              number: 80
