@@ -3,6 +3,11 @@ kind: Ingress
 metadata:
   name: flaskdemo
 spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - chatgptproxy.cwsh.top
+    secretName: tls-secret
   rules:
   - host: flaskdemo.cwsh.top
     http:
@@ -14,5 +19,4 @@ spec:
             name: flaskdemo
             port:
               number: 80
-  ingressClassName: nginx
 
