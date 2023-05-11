@@ -68,3 +68,16 @@ spec:
   commonName: kubia.cwsh.top
   dnsNames:
   - kubia.cwsh.top
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kubecert1
+spec:
+  secretName: flaskdemo-tls-secret
+  issuerRef:
+    name: kubeissuer
+    kind: ClusterIssuer
+  commonName: flaskdemo.cwsh.top
+  dnsNames:
+  - flaskdemo.cwsh.top

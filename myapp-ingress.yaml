@@ -8,8 +8,8 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - chatgptproxy.cwsh.top
-    secretName: tls-secret
+    - flaskdemo.cwsh.top
+    secretName: flaskdemo-tls-secret
   rules:
   - host: flaskdemo.cwsh.top
     http:
