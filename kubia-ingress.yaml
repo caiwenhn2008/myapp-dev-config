@@ -1,12 +1,15 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: kubeissuer
+    # kubernetes.io/ingress.class: nginx
   name: kubia
 spec:
   tls:
   - hosts:
     - kubia.cwsh.top
-    secretName: tls-secret
+    secretName: kubia-tls-secret
   ingressClassName: nginx
   rules:
   - host: kubia.cwsh.top
