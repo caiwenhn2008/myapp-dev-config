@@ -9,7 +9,7 @@ spec:
   tls:
   - hosts:
     - chatgptproxy.cwsh.top
-    secretName: real-tls-secret
+    secretName: tls-secret
   rules:
   - host: flaskdemo.cwsh.top
     http:
