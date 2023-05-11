@@ -9,7 +9,7 @@ spec:
   tls:
   - hosts:
     - kubia.cwsh.top
-    secretName: tls-secret
+    secretName: kubia-tls-secret
   ingressClassName: nginx
   rules:
   - host: kubia.cwsh.top
