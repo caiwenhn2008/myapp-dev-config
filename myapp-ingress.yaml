@@ -1,16 +1,3 @@
-apiVersion: cert-manager.io/v1
-kind: Certificate
-metadata:
-  name: kubecert
-spec:
-  secretName: flaskdemo-tls-secret
-  issuerRef:
-    name: kubeissuer
-    kind: ClusterIssuer
-  commonName: flaskdemo.cwsh.top
-  dnsNames:
-  - flaskdemo.cwsh.top
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -22,7 +9,7 @@ spec:
   tls:
   - hosts:
     - chatgptproxy.cwsh.top
-    secretName: flaskdemo-tls-secret
+    secretName: real-tls-secret
   rules:
   - host: flaskdemo.cwsh.top
     http:

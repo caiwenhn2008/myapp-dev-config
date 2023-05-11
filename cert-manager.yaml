@@ -61,10 +61,10 @@ kind: Certificate
 metadata:
   name: kubecert
 spec:
-  secretName: kubia-tls-secret
+  secretName: real-tls-secret
   issuerRef:
     name: kubeissuer
     kind: ClusterIssuer
-  commonName: kubia.cwsh.top
+  commonName: cwsh.top
   dnsNames:
-  - kubia.cwsh.top
+  - cwsh.top
