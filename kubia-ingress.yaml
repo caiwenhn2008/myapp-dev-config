@@ -22,3 +22,10 @@ spec:
             name: kubia
             port:
               number: 80
+      - pathType: Prefix
+        path: /second
+        backend:
+          service:
+            name: kubia
+            port:
+              number: 80
