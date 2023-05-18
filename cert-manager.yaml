@@ -81,3 +81,16 @@ spec:
   commonName: flaskdemo.cwsh.top
   dnsNames:
   - flaskdemo.cwsh.top
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kubecertforargocd
+spec:
+  secretName: argocd-tls-secret
+  issuerRef:
+    name: kubeissuer
+    kind: ClusterIssuer
+  commonName: argocd.cwsh.top
+  dnsNames:
+  - argocd.cwsh.top
