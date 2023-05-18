@@ -13,7 +13,7 @@ spec:
   tls:
   - hosts:
           - argocd.cwsh.top
-    secretName: argocd-secret
+    secretName: argocd-tls-secret
   rules:
   - host: argocd.cwsh.top
     http:
